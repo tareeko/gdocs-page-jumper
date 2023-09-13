@@ -1,22 +1,21 @@
 {
-    "manifest_version": 2,
-    "name": "Google Docs Page Jumper",
-    "description": "This extension lets you go to any page of a Google Docs document",
-    "version": "1.0",
-    "homepage_url": "https://github.com/tareeko/gdocs-page-jumper",
-    "browser_action": {
-        "default_icon": "favicon.png",
-        "default_popup": "popup.html",
-        "default_title": "PageJumper"
-    },
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "all_frames": true,
-        "js":      ["scripts/content.js"]
-    }],
-    "permissions": [
-        "activeTab",
-        "https://docs.google.com/document/d*"
-    ],
-    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
+  "manifest_version": 2,
+  "name": "Google Docs Page Jumper",
+  "description": "This extension lets you go to any page of a Google Docs document",
+  "version": "1.2",
+  "homepage_url": "https://github.com/tareeko/gdocs-page-jumper",
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html",
+    "default_title": "PageJumper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "permissions": ["https://docs.google.com/document/d*"],
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'"
 }
